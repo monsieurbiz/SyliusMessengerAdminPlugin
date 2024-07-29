@@ -1,11 +1,11 @@
 <h1 align="center">Sylius Symfony Messenger Admin</h1>
 
-[![Robots TXT Plugin license](https://img.shields.io/github/license/monsieurbiz/SyliusMessengerAdminPlugin?public)](https://github.com/monsieurbiz/SyliusMessengerAdminPlugin/blob/master/LICENSE.txt)
+[![Symfony Messenger Admin TXT Plugin license](https://img.shields.io/github/license/monsieurbiz/SyliusMessengerAdminPlugin?public)](https://github.com/monsieurbiz/SyliusMessengerAdminPlugin/blob/master/LICENSE.txt)
 [![Tests Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusMessengerAdminPlugin/tests.yaml?branch=master&logo=github)](https://github.com/monsieurbiz/SyliusMessengerAdminPlugin/actions?query=workflow%3ATests)
 [![Recipe Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusMessengerAdminPlugin/recipe.yaml?branch=master&label=recipes&logo=github)](https://github.com/monsieurbiz/SyliusMessengerAdminPlugin/actions?query=workflow%3ASecurity)
 [![Security Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusMessengerAdminPlugin/security.yaml?branch=master&label=security&logo=github)](https://github.com/monsieurbiz/SyliusMessengerAdminPlugin/actions?query=workflow%3ASecurity)
 
-Manage your robots.txt from your Sylius admin pannel
+Displays Symfony Messenger messages in Sylius admin panel
 
 ![Demo of the grid display containing messages in queue](docs/images/demo.jpg)
 ![Demo of a failed message displayed in admin](docs/images/demo_failed.jpg)
