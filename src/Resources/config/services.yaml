@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    MonsieurBiz\SyliusMessengerAdminPlugin\:
+        resource: '../../*'
+        exclude: '../../{Entity}'
+
+    MonsieurBiz\SyliusMessengerAdminPlugin\Controller\:
+        resource: '../../Controller'
+        tags: [ 'controller.service_arguments' ]
+

@@ -1,0 +1,8 @@
+parameters:
+    level: max
+    paths:
+        - %rootDir%/src/
+
+    excludePaths:
+        # Test dependencies
+        - 'tests/Application/**/*'
