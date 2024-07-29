@@ -1,3 +1,0 @@
-monsieurbiz_messenger_admin:
-    resource: '@MonsieurBizSyliusMessengerAdminPlugin/Resources/config/routes/admin.yaml'
-    prefix: '/%sylius_admin.path_name%/messages'

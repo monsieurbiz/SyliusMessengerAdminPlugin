@@ -52,7 +52,9 @@ imports:
 Finally import the routes in `config/routes/monsieurbiz_sylius_messenger_admin_plugin.yaml` : 
 
 ```yaml
-
+monsieurbiz_messenger_admin:
+    resource: '@MonsieurBizSyliusMessengerAdminPlugin/Resources/config/routes/admin.yaml'
+    prefix: '/%sylius_admin.path_name%/messages'
 ```
 
 </p>
