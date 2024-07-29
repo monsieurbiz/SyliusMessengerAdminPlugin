@@ -1,6 +1,6 @@
 monsieurbiz_messenger_admin:
     messenger:
-        created_at: 'Available at'
+        created_at: 'Created at'
         available_at: 'Available at'
         delivered_at: 'Delivered at'
         id: 'ID'
