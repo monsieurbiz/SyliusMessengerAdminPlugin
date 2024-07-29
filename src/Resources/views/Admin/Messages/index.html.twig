@@ -1,0 +1,29 @@
+{% extends '@SyliusAdmin/layout.html.twig' %}
+
+{% import '@SyliusAdmin/Macro/breadcrumb.html.twig' as breadcrumb %}
+
+{% block title %}{{'monsieurbiz_messenger_admin.messenger.messenger_messages' | trans }} {{ parent() }}{% endblock %}
+
+{% block content %}
+    {% set breadcrumbs = [
+        { label: 'sylius.ui.administration'|trans, url: path('sylius_admin_dashboard') },
+        { label: 'monsieurbiz_messenger_admin.messenger.messenger_messages' | trans }
+    ] %}
+
+    <div class="ui stackable two column grid">
+        <div class="ten wide column">
+            <h1 class="ui header">
+                <i class="circular stopwatch icon"></i>
+                <div class="content">
+                    {{ 'monsieurbiz_messenger_admin.messenger.messenger_messages' | trans  }}
+                </div>
+            </h1>
+        </div>
+    </div>
+
+    <div class="ui divider"></div>
+
+    {{ breadcrumb.crumble(breadcrumbs) }}
+
+    {{ sylius_grid_render(resources, '@SyliusUi/Grid/_default.html.twig') }}
+{% endblock %}

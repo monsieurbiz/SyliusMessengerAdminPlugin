@@ -1,0 +1,64 @@
+sylius_grid:
+    templates:
+        action:
+            showMessage: "@MonsieurBizSyliusMessengerAdminPlugin/Admin/Action/showMessage.html.twig"
+    grids:
+        monsieurbiz_messenger_admin_messages:
+            driver:
+                name: doctrine/dbal
+                options:
+                    table: messenger_messages
+                    aliases: []
+            sorting:
+                id: desc
+            filters:
+                id:
+                    type: string
+                    label: monsieurbiz_messenger_admin.messenger.id
+                queue_name:
+                    type: string
+                    label: monsieurbiz_messenger_admin.messenger.queue_name
+                body:
+                    type: string
+                    label: monsieurbiz_messenger_admin.messenger.message_body
+            fields:
+                id:
+                    label: monsieurbiz_messenger_admin.messenger.id
+                    type: string
+                    sortable: ~
+                    path: '[id]'
+                body:
+                    label: monsieurbiz_messenger_admin.messenger.message_body
+                    type: twig
+                    path: '[body]'
+                    options:
+                        template: '@MonsieurBizSyliusMessengerAdminPlugin/Admin/Grid/Field/Message/body.html.twig'
+                queue_name:
+                    label: monsieurbiz_messenger_admin.messenger.queue_name
+                    type: twig
+                    sortable: ~
+                    path: '[queue_name]'
+                    options:
+                        template: '@MonsieurBizSyliusMessengerAdminPlugin/Admin/Grid/Field/Message/queue_name.html.twig'
+                created_at:
+                    label: monsieurbiz_messenger_admin.ui.created_at
+                    type: string
+                    sortable: ~
+                    path: '[created_at]'
+                available_at:
+                    label: monsieurbiz_messenger_admin.messenger.available_at
+                    type: string
+                    sortable: ~
+                    path: '[available_at]'
+                delivered_at:
+                    label: monsieurbiz_messenger_admin.messenger.delivered_at
+                    type: string
+                    sortable: ~
+                    path: '[delivered_at]'
+                # Field because grid actions works only with Resource Grid
+                actions:
+                    label: sylius.ui.actions
+                    type: twig
+                    path: .
+                    options:
+                        template: '@MonsieurBizSyliusMessengerAdminPlugin/Admin/Grid/Action/showMessage.html.twig'

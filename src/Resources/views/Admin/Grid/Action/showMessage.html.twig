@@ -1,0 +1,3 @@
+{% import '@SyliusUi/Macro/buttons.html.twig' as buttons %}
+
+{{ buttons.show(path('monsieurbiz_messenger_admin_messages_show', {id: data.id, queueName: data.queue_name}), 'sylius.ui.show') }}

@@ -1,0 +1,20 @@
+monsieurbiz_messenger_admin_messages_index:
+    path: /
+    methods: [GET, POST]
+    controller: MonsieurBiz\SyliusMessengerAdminPlugin\Controller\MessageController::index
+
+monsieurbiz_messenger_admin_messages_show:
+    path: /{queueName}/{id}
+    methods: [GET]
+    controller: MonsieurBiz\SyliusMessengerAdminPlugin\Controller\MessageController::show
+
+
+monsieurbiz_messenger_admin_messages_retry:
+    path: /{queueName}/{id}/retry
+    methods: [GET]
+    controller: MonsieurBiz\SyliusMessengerAdminPlugin\Controller\MessageController::retry
+
+monsieurbiz_messenger_admin_messages_remove:
+    path: /{queueName}/{id}/remove
+    methods: [GET]
+    controller: MonsieurBiz\SyliusMessengerAdminPlugin\Controller\MessageController::remove

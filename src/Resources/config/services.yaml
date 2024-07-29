@@ -12,3 +12,5 @@ services:
         resource: '../../Controller'
         tags: [ 'controller.service_arguments' ]
 
+    Sylius\Component\Grid\Provider\GridProviderInterface: '@sylius.grid.provider'
+    Sylius\Component\Grid\View\GridViewFactoryInterface: '@sylius.grid.view_factory'

@@ -1,0 +1,12 @@
+monsieurbiz_messenger_admin:
+    messenger:
+        available_at: 'Available at'
+        delivered_at: 'Delivered at'
+        id: 'ID'
+        message_body: 'Message body'
+        messenger_messages: 'Messages in queue'
+        messenger: 'Messenger'
+        or: 'or'
+        queue_name: 'Name'
+        remove: 'Remove'
+        retry: 'Retry'

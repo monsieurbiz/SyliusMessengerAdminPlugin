@@ -1,0 +1,40 @@
+{% extends '@SyliusAdmin/layout.html.twig' %}
+
+{% import '@SyliusAdmin/Macro/breadcrumb.html.twig' as breadcrumb %}
+
+{% block title %}{{'monsieurbiz_messenger_admin.messenger.messenger_messages' | trans }} {{ parent() }}{% endblock %}
+
+{% block content %}
+    {% set breadcrumbs = [
+        { label: 'sylius.ui.administration'|trans, url: path('sylius_admin_dashboard') },
+        { label: 'monsieurbiz_messenger_admin.messenger.messenger_messages' | trans, url: path('monsieurbiz_messenger_admin_messages_index') },
+        { label: queueName ~ ' / ' ~ resourceId }
+    ] %}
+
+    <div class="ui stackable two column grid">
+        <div class="ten wide column">
+            <h1 class="ui header">
+                <i class="circular stopwatch icon"></i>
+                <div class="content">
+                    {{ 'monsieurbiz_messenger_admin.messenger.messenger_messages' | trans  }}
+                </div>
+            </h1>
+        </div>
+    </div>
+
+    <div class="ui divider"></div>
+
+    {{ breadcrumb.crumble(breadcrumbs) }}
+
+    <pre style="max-height:600px;overflow: auto;padding: 5px; background: #dddddd;font-size: 12px">
+        {{ content }}
+    </pre>
+
+    <div class="ui divider hidden"></div>
+
+    <div class="ui buttons">
+        <a class="button ui positive button" href="{{ path('monsieurbiz_messenger_admin_messages_retry', {id: resourceId, queueName: queueName}) }}">{{ 'monsieurbiz_messenger_admin.messenger.retry' | trans }}</a>
+            <div class="or" data-text="{{ 'monsieurbiz_messenger_admin.messenger.or' | trans }}"></div>
+        <a class="button ui negative button" href="{{ path('monsieurbiz_messenger_admin_messages_remove', {id: resourceId, queueName: queueName}) }}">{{ 'monsieurbiz_messenger_admin.messenger.remove' | trans }}</a>
+    </div>
+{% endblock %}

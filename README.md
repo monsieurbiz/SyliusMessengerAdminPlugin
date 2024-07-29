@@ -7,7 +7,8 @@
 
 Manage your robots.txt from your Sylius admin pannel
 
-![Demo of the settings form to manage robots.txt content](docs/images/demo.jpg)
+![Demo of the grid display containing messages in queue](docs/images/demo.jpg)
+![Demo of a failed message displayed in admin](docs/images/demo_failed.jpg)
 
 ## Compatibility
 
