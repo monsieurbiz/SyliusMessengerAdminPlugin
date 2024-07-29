@@ -41,7 +41,7 @@ sylius_grid:
                     options:
                         template: '@MonsieurBizSyliusMessengerAdminPlugin/Admin/Grid/Field/Message/queue_name.html.twig'
                 created_at:
-                    label: monsieurbiz_messenger_admin.ui.created_at
+                    label: monsieurbiz_messenger_admin.messenger.created_at
                     type: string
                     sortable: ~
                     path: '[created_at]'
