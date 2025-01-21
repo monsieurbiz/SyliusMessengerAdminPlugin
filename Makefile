@@ -1,13 +1,13 @@
 .DEFAULT_GOAL := help
 SHELL=/bin/bash
 APP_DIR=tests/Application
-SYLIUS_VERSION=1.13.0
+SYLIUS_VERSION=1.14.0
 SYMFONY=cd ${APP_DIR} && symfony
 COMPOSER=symfony composer
 CONSOLE=${SYMFONY} console
 export COMPOSE_PROJECT_NAME=sylius_messenger_admin_plugin
 PLUGIN_NAME=sylius-messenger-admin-plugin
-COMPOSE=docker-compose
+COMPOSE=docker compose
 YARN=yarn
 DOCTRINE_MIGRATIONS_NAMESPACE=MonsieurBiz\SyliusMessengerAdminPlugin\Migrations
 
